@@ -1,0 +1,3 @@
+description = "UTF-8 string literals and patterns for OCaml"
+version = "%%VERSION%%"
+ppx = "./ppx_utf8_lit"

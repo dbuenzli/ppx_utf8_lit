@@ -1,0 +1,7 @@
+true: bin_annot, debug
+<src> : include
+<src/*.{ml,byte,native}> : package(compiler-libs.common), \
+  package(uutf), package(uunf)
+
+<test> : include
+<test/test.ml> : ppx_utf8_lit

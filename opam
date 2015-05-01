@@ -1,0 +1,17 @@
+opam-version: "1.2"
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+homepage: "http://erratique.ch/software/ppx_utf8_lit"
+doc: "http://erratique.ch/software/ppx_utf8_lit"
+dev-repo: "http://erratique.ch/repos/ppx_utf8_lit.git"
+bug-reports: "https://github.com/dbuenzli/ppx_utf8_lit/issues"
+tags: [ "ppx" "syntax" "unicode" "text" "normalization" "org:erratique" ]
+license: "BSD3"
+available: [ ocaml-version >= "4.02.0"]
+depends: [ "ocamlfind" "uutf" "uunf" ]
+build: 
+[
+  [ "ocaml" "pkg/git.ml" ]
+  [ "ocaml" "pkg/build.ml" "native=%{ocaml-native}%"
+                           "native-dynlink=%{ocaml-native-dynlink}%" ]
+]

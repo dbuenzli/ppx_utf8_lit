@@ -52,26 +52,26 @@ let find_uattr attrs =
 
 let expr m = function
 | { pexp_loc = loc;
-    pexp_desc = Pexp_constant (Const_string (str, None));
+    pexp_desc = Pexp_constant (Const_string (str, v));
     pexp_attributes; } as e ->
     begin match find_uattr pexp_attributes with
     | None -> default_mapper.expr m e
     | Some uattr ->
         let ustr = utf8_normalize ~loc (uattr_to_nf uattr) str in
-        let pexp_desc = Pexp_constant (Const_string (ustr, None)) in
+        let pexp_desc = Pexp_constant (Const_string (ustr, v)) in
         default_mapper.expr m { e with pexp_desc }
     end
 | e -> default_mapper.expr m e
 
 let pat m = function
 | { ppat_loc = loc;
-    ppat_desc = Ppat_constant (Const_string (str, None));
+    ppat_desc = Ppat_constant (Const_string (str, v));
     ppat_attributes; } as p ->
     begin match find_uattr ppat_attributes with
     | None -> default_mapper.pat m p
     | Some uattr ->
         let ustr = utf8_normalize ~loc (uattr_to_nf uattr) str in
-        let ppat_desc = Ppat_constant (Const_string (ustr, None)) in
+        let ppat_desc = Ppat_constant (Const_string (ustr, v)) in
         default_mapper.pat m { p with ppat_desc }
     end
 | p -> default_mapper.pat m p

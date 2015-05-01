@@ -101,7 +101,7 @@ there's no cross-platform consensus – and it some sense it should be
 the task of the FS APIs to normalize whatever we feed them with).
 
 This means that now, if I you make sure that the strings you input are
-e.g. in a given normal form (using
+in a given normal form (using
 e.g. [Uutf](http://erratique.ch/software/uutf) and
 [Uunf](http://erratique.ch/software/uunf)) you can safely pattern
 match on them. For example:

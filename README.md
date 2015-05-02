@@ -80,7 +80,7 @@ However there are two problems with these UTF-8 literals and patterns:
    convenient nor readable.  (e.g. `"Révolte"` in NFD would be
    `"Re\xCC\x81volte"`)
 
-In order to aleviate this, we introduce 5 annotations on string
+In order to alleviate this, we introduce 5 annotations on string
 literals and patterns. Any string sporting such an annotation will be
 checked for UTF-8 validity with compilation failing if that is not the
 case. Besides each of the annotation will guarantee the string is

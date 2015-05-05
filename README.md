@@ -4,7 +4,7 @@ Experiment
 
 This ppx explores *one* design direction to improve the Unicode
 support provided by the OCaml compiler. See the
-[rationale](#Rationale).
+[rationale](#rationale).
 
 `ppx_utf8_lit` depends on [Uutf][1] and [Uunf][2]
 

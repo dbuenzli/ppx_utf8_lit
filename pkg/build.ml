@@ -5,6 +5,6 @@
 let () =
   Pkg.describe "ppx_utf8_lit" ~builder:`OCamlbuild [
     Pkg.lib "pkg/META";
-    Pkg.lib_bin ~auto:true "src/ppx_utf8_lit";
+    Pkg.libexec ~auto:true "src/ppx_utf8_lit";
     Pkg.doc "README.md";
     Pkg.doc "CHANGES.md"; ]

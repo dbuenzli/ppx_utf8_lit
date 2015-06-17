@@ -17,7 +17,6 @@ Note, `ppx_utf8_lit` is not formally released, it is an experiment.
 
 ```
 # With opam 1.2 or later
-opam pin add uunf http://erratique.ch/repos/uunf.git
 opam pin add ppx_utf8_lit http://erratique.ch/repos/ppx_utf8_lit.git
 ```
 
